@@ -2,6 +2,11 @@
 
 A complete real-time analytics pipeline that tracks user behavior, product views, and purchase trends for e-commerce platforms.
 
+## 📽️ Demo Video 🎥📺  
+Watch the system in action on YouTube:  
+[▶️ Real-Time Demo (3:32)](https://youtu.be/GH_w4hilChg)
+
+
 ## 🏗️ Architecture Overview
 
 ```
