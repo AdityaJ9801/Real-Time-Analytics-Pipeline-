@@ -1,0 +1,4 @@
+kafka-python
+Faker
+pymongo
+flask_cors

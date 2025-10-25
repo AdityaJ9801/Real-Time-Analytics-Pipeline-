@@ -1,0 +1,18 @@
+[2025-10-25T03:10:25.349+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_summary.summarize_purchases manual__2025-10-25T03:10:24.977165+00:00 [queued]>
+[2025-10-25T03:10:25.357+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_summary.summarize_purchases manual__2025-10-25T03:10:24.977165+00:00 [queued]>
+[2025-10-25T03:10:25.357+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2025-10-25T03:10:25.371+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): summarize_purchases> on 2025-10-25 03:10:24.977165+00:00
+[2025-10-25T03:10:25.378+0000] {standard_task_runner.py:60} INFO - Started process 268 to run task
+[2025-10-25T03:10:25.382+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_summary', 'summarize_purchases', 'manual__2025-10-25T03:10:24.977165+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/daily_summary.py', '--cfg-path', '/tmp/tmp84wp7pmv']
+[2025-10-25T03:10:25.384+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask summarize_purchases
+[2025-10-25T03:10:25.409+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-25T03:10:25.449+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_summary.summarize_purchases manual__2025-10-25T03:10:24.977165+00:00 [running]> on host 94d0fb4d1306
+[2025-10-25T03:10:25.527+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_summary' AIRFLOW_CTX_TASK_ID='summarize_purchases' AIRFLOW_CTX_EXECUTION_DATE='2025-10-25T03:10:24.977165+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-25T03:10:24.977165+00:00'
+[2025-10-25T03:10:25.528+0000] {daily_summary.py:15} INFO - 🚀 Starting daily summary job...
+[2025-10-25T03:10:25.799+0000] {daily_summary.py:23} INFO - 📊 Found 19060 total events
+[2025-10-25T03:10:25.802+0000] {daily_summary.py:31} INFO - 💰 Found 6307 purchase events
+[2025-10-25T03:10:25.814+0000] {daily_summary.py:47} INFO - ✅ Daily summary stored: {'date': datetime.datetime(2025, 10, 25, 3, 10, 25, 804089, tzinfo=datetime.timezone.utc), 'total_events': 19060, 'total_purchases': 6307, 'top_purchases': [{'product_id': 'd6a7865d-4da3-459b-beac-5f8cad8ee2ff', 'count': 661}, {'product_id': 'c0330e0e-f30c-44ec-b21e-20ee44061129', 'count': 637}, {'product_id': '37608d2e-0b4d-4709-9846-fe410471ac49', 'count': 633}, {'product_id': '0564cadf-346c-4b3e-9453-92c3fc7319f2', 'count': 619}, {'product_id': 'a43f083c-9982-4132-99ae-b3bfca86903d', 'count': 617}], 'unique_products': 20, 'unique_users': 20, '_id': ObjectId('68fc3fa12c6999801902c2ea')}
+[2025-10-25T03:10:25.825+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-10-25T03:10:25.835+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=daily_summary, task_id=summarize_purchases, execution_date=20251025T031024, start_date=20251025T031025, end_date=20251025T031025
+[2025-10-25T03:10:25.876+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-10-25T03:10:25.890+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
