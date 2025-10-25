@@ -280,23 +280,4 @@ After running for a few minutes:
 - **Unique users:** 10
 - **Locations:** Various cities
 
-## 🎯 Next Steps
-
-1. **Customize Event Generation:** Modify `producer/producer.py` to generate realistic data
-2. **Add Grafana Dashboards:** Create visualizations for key metrics
-3. **Scale Kafka:** Add more partitions and brokers
-4. **Add Real Data:** Connect to actual user event sources
-5. **Implement Alerts:** Set up Prometheus alerts for anomalies
-
-## 📞 Support
-
-For issues or questions:
-1. Check logs: `docker-compose logs [service_name]`
-2. Verify all services are healthy: `docker-compose ps`
-3. Review error messages in service logs
-4. Check Docker network: `docker network inspect [network_name]`
-
-## 📄 License
-
-This project is provided as-is for educational purposes.
 
