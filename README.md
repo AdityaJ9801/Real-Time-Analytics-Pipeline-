@@ -2,6 +2,69 @@
 
 A complete real-time analytics pipeline that tracks user behavior, product views, and purchase trends for e-commerce platforms.
 
+<<<<<<< HEAD
+=======
+## 📽️ Demo Video 🎥📺  
+Watch the system in action on YouTube:  
+[▶️ Real-Time Demo (3:32)](https://youtu.be/GH_w4hilChg)
+
+
+Here’s a real-world problem scenario and how your project provides a complete solution, formatted for inclusion in your README or documentation:
+
+---
+
+## 🧩 Real-World Problem Scenario
+
+Modern e-commerce platforms face a critical challenge: understanding user behavior in real time to optimize product placement, personalize experiences, and increase conversions. Traditional batch analytics systems are too slow to react to dynamic user interactions, leading to missed opportunities in:
+
+- Tracking which products are trending right now
+- Identifying high-converting categories and user segments
+- Detecting drop-offs or anomalies in user engagement
+- Generating timely reports for marketing and operations teams
+- Scaling analytics infrastructure without bottlenecks
+
+Retailers need a system that can ingest, process, and visualize millions of user events per day—instantly and reliably.
+
+---
+
+## ✅ Our Solution: Real-Time Analytics Pipeline
+
+This project solves the above problem by building a modular, scalable, and production-grade real-time analytics system tailored for e-commerce platforms.
+
+### Key Capabilities
+
+| Challenge | Solution |
+|----------|----------|
+| Real-time event ingestion | Kafka-based producer simulates user activity (views, clicks, purchases) |
+| Scalable stream processing | Kafka consumer aggregates and filters events before storing |
+| Flexible storage | MongoDB stores raw and processed data with schema-less flexibility |
+| Time-filtered analytics | Flask API supports dynamic queries with time ranges |
+| Daily summaries | Airflow DAGs generate batch reports for business intelligence |
+| Monitoring and observability | Prometheus + Grafana track system health and database metrics |
+| Visual insights | Streamlit dashboard provides interactive charts and KPIs |
+
+### Supported Use Cases
+
+- Product performance tracking (views, purchases, conversion rate)
+- User engagement analysis (active users, new signups)
+- Category-level insights (top categories, conversion trends)
+- Operational monitoring (event throughput, service health)
+- Daily reporting for marketing and inventory teams
+
+---
+
+## 🧠 Why This Matters
+
+This system mirrors the architecture used by real-world platforms like Amazon, Flipkart, and Shopify to:
+
+- React to user behavior instantly
+- Drive personalized recommendations
+- Optimize ad spend and product placement
+- Monitor system performance across services
+- Enable data-driven decision-making at scale
+
+---
+>>>>>>> 59120b0298c6beaa403f2c9558c498dd0cfa244e
 
 ## 🏗️ Architecture Overview
 
@@ -276,23 +339,4 @@ After running for a few minutes:
 - **Unique users:** 10
 - **Locations:** Various cities
 
-## 🎯 Next Steps
-
-1. **Customize Event Generation:** Modify `producer/producer.py` to generate realistic data
-2. **Add Grafana Dashboards:** Create visualizations for key metrics
-3. **Scale Kafka:** Add more partitions and brokers
-4. **Add Real Data:** Connect to actual user event sources
-5. **Implement Alerts:** Set up Prometheus alerts for anomalies
-
-## 📞 Support
-
-For issues or questions:
-1. Check logs: `docker-compose logs [service_name]`
-2. Verify all services are healthy: `docker-compose ps`
-3. Review error messages in service logs
-4. Check Docker network: `docker network inspect [network_name]`
-
-## 📄 License
-
-This project is provided as-is for educational purposes.
 
