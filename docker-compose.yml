@@ -157,3 +157,11 @@ services:
       - "5000:5000"
     depends_on:
       - mongo
+
+  # Streamlit app
+  streamlit_app:
+    build: ./streamlit_app
+    ports:
+      - "8501:8501"
+    depends_on:
+      - dashboard

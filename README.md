@@ -2,6 +2,7 @@
 
 A complete real-time analytics pipeline that tracks user behavior, product views, and purchase trends for e-commerce platforms.
 
+
 ## 🏗️ Architecture Overview
 
 ```
