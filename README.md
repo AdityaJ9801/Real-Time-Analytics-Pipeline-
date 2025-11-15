@@ -69,27 +69,36 @@ This system mirrors the architecture used by real-world platforms like Amazon, F
 ## 🏗️ Architecture Overview
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    Real-Time Analytics Pipeline                 │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                   │
-│  Producer (Faker)  ──→  Kafka Topic  ──→  Consumer  ──→  MongoDB │
-│  (Simulates Events)    (clickstream)    (Processes)   (Storage)  │
-│                                                            │       │
-│                                                            ↓       │
-│                                                      Dashboard API │
-│                                                      (Flask)       │
-│                                                            │       │
-│                                                            ↓       │
-│                                                      Airflow DAG   │
-│                                                      (Daily Jobs)  │
-│                                                                   │
-│  Monitoring Stack:                                               │
-│  ├─ Prometheus (Metrics)                                         │
-│  ├─ Grafana (Visualization)                                      │
-│  └─ MongoDB Exporter (DB Metrics)                                │
-│                                                                   │
-└─────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────┐
+│                       Real-Time Analytics Pipeline                        │
+├───────────────────────────────────────────────────────────────────────────┤
+│                                                                           │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────┐ │
+│  │  Producer    │ →  │   Kafka      │ →  │  Consumer    │ →  │ MongoDB  │ │
+│  │   (Faker)    │    │   Topic      │    │ (Processes)  │    │ (Storage)│ │
+│  └──────────────┘    └──────────────┘    └──────────────┘    └──────────┘ │
+│                                                                           │
+│                                │                                          │
+│                                ↓                                          │
+│                        ┌──────────────┐                                   │
+│                        │ Dashboard API│                                   │
+│                        │    (Flask)   │                                   │
+│                        └──────────────┘                                   │
+│                                │                                          │
+│                                ↓                                          │
+│                        ┌──────────────┐                                   │
+│                        │ Airflow DAG  │                                   │
+│                        │ (Daily Jobs) │                                   │
+│                        └──────────────┘                                   │
+│                                                                           │
+│  Monitoring Stack:                                                        │
+│   ┌──────────────┐   ┌──────────────┐   ┌──────────────────────────────┐  │
+│   │ Prometheus   │   │   Grafana    │   │ MongoDB Exporter (DB Metrics)│  │
+│   │  (Metrics)   │   │Visualization │   │                              │  │
+│   └──────────────┘   └──────────────┘   └──────────────────────────────┘  │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘
+
 ```
 
 ## 📋 Prerequisites
